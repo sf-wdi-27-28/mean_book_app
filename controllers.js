@@ -3,6 +3,7 @@ angular
   .controller('BooksController', BooksController);
 
 function BooksController (Book) {
+  console.log('BooksController')
   this.newBook = {};
   this.books = Book.query(); // returns all the books
   this.createBook = createBook;

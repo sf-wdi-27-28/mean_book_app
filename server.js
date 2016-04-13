@@ -31,11 +31,14 @@ app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.get('/', function homepage (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
+app.get('/books', function homepage (req, res) {
+  res.sendFile(__dirname + '/templates/books-index.html');
+});
 
 // ALL OTHER ROUTES (ANGULAR HANDLES)
 // redirect all other paths to index
 app.get('*', function homepage (req, res) {
-  res.sendFile(__dirname + '/views/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 /**********
