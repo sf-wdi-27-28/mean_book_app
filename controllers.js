@@ -1,5 +1,5 @@
 angular
-  .module('bookApp')
+  .module('bookApp', [])
   .controller('BooksController', BooksController);
 
 function BooksController (Book) {
